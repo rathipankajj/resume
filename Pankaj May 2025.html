@@ -9,26 +9,82 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f3f4f6; /* Light gray background */
+            background-color: #f3f4f6;
         }
         .section-title {
-            border-bottom: 2px solid #e5e7eb; /* Light gray border for separation */
+            border-bottom: 2px solid #e5e7eb;
             padding-bottom: 0.5rem;
             margin-bottom: 1.5rem;
+        }
+
+        @media print {
+            body {
+                font-size: 9.5pt;
+            }
+            h1 {
+                font-size: 26pt !important;
+            }
+            h2 {
+                font-size: 17pt !important;
+            }
+            h3 {
+                font-size: 13pt !important;
+            }
+            p, li {
+                font-size: 9.5pt !important;
+                line-height: 1.25;
+            }
+            .section-title {
+                padding-bottom: 0.15rem;
+                margin-bottom: 0.7rem;
+            }
+            .mb-8 {
+                margin-bottom: 0.8rem !important;
+            }
+            .mb-6 {
+                margin-bottom: 0.6rem !important;
+            }
+            .pb-4 {
+                padding-bottom: 0.4rem !important;
+            }
+            .mt-2 {
+                margin-top: 0.2rem !important;
+            }
+            .space-y-1 > *:not([hidden]) ~ *:not([hidden]) {
+                margin-top: 0.1rem !important;
+            }
+            .space-y-0\.5 > *:not([hidden]) ~ *:not([hidden]) {
+                margin-top: 0.05rem !important;
+            }
+            .p-4, .p-6, .p-8, .p-10 {
+                padding: 0.45in !important;
+            }
+            .max-w-4xl {
+                max-width: none !important;
+            }
+            .rounded-lg, .rounded-t-lg {
+                border-radius: 0 !important;
+            }
+            .shadow-lg {
+                box-shadow: none !important;
+            }
+            .bg-gray-800 {
+                background-color: #333 !important;
+                -webkit-print-color-adjust: exact;
+                color-adjust: exact;
+            }
         }
     </style>
 </head>
 <body class="p-4 sm:p-6 md:p-8 lg:p-10">
     <div class="max-w-4xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
-        <header class="bg-gray-800 text-white p-6 rounded-t-lg">
-            <h1 class="text-4xl font-bold mb-1">Pankaj Rathi</h1>
-            <p class="text-lg font-light">pankajr@gmail.com | +1-650-605-3585</p>
-            <div class="mt-4 text-sm">
-                </div>
+        <header class="bg-gray-800 text-white p-4 rounded-t-lg">
+            <h1 class="text-3xl font-bold mb-0">Pankaj Rathi</h1>
+            <p class="text-base font-light">pankajr@gmail.com | +1-650-605-3585</p>
         </header>
 
         <main class="p-6 sm:p-8 md:p-10">
-            <section class="mb-8">
+            <section class="mb-6">
                 <h2 class="text-2xl font-semibold text-gray-800 section-title">Summary</h2>
                 <p class="text-gray-700 leading-relaxed">
                     Hands-on product and operations leader with extensive full-cycle experience in
@@ -40,12 +96,12 @@
                 </p>
             </section>
 
-            <section class="mb-8">
+            <section class="mb-6">
                 <h2 class="text-2xl font-semibold text-gray-800 section-title">Skills</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-700">
                     <div>
                         <h3 class="text-lg font-semibold mb-2">Operational Leadership & Scaling:</h3>
-                        <ul class="list-disc list-inside space-y-1">
+                        <ul class="list-disc list-outside ml-4 space-y-1">
                             <li>Manufacturing, Supply Chain Management, & Global Sourcing Operations</li>
                             <li>Process Engineering & Facilities Bring-up</li>
                             <li>Capacity Planning & Optimization</li>
@@ -55,10 +111,9 @@
                     </div>
                     <div>
                         <h3 class="text-lg font-semibold mb-2">Manufacturing & Quality Assurance:</h3>
-                        <ul class="list-disc list-inside space-y-1">
+                        <ul class="list-disc list-outside ml-4 space-y-1">
                             <li>Pilot to Scale Manufacturing Line Setup</li>
-                            <li>DFM (Design for Manufacturability)</li>
-                            <li>Yield Improvement (<strong class="font-medium">44% increase</strong>)</li>
+                            <li>Hands on DFM & Yield Improvement expertise </li>
                             <li>Quality systems development</li>
                             <li>Validation Testing & Reliability Engineering</li>
                             <li>Problem Solving & Root Cause Analysis</li>
@@ -66,7 +121,7 @@
                     </div>
                     <div>
                         <h3 class="text-lg font-semibold mb-2">Product Development & NPI:</h3>
-                        <ul class="list-disc list-inside space-y-1">
+                        <ul class="list-disc list-outside ml-4 space-y-1">
                             <li>Full Product Lifecycle Management (Concept to Commercialization)</li>
                             <li>Hardware NPI & Rapid Prototyping</li>
                             <li>Field Trials & Data-Driven Product Maturation</li>
@@ -75,7 +130,7 @@
                     </div>
                     <div>
                         <h3 class="text-lg font-semibold mb-2">Strategic & Business Acumen:</h3>
-                        <ul class="list-disc list-inside space-y-1">
+                        <ul class="list-disc list-outside ml-4 space-y-1">
                             <li>Startup Strategy & VC Due Diligence</li>
                             <li>Financial Modeling & Budget Management (<strong class="font-medium">$2-50M+</strong>)</li>
                             <li>Customer Support Organization Build & Scale</li>
@@ -85,10 +140,10 @@
                 </div>
             </section>
 
-            <section class="mb-8">
+            <section class="mb-6">
                 <h2 class="text-2xl font-semibold text-gray-800 section-title">Work History</h2>
 
-                <div class="mb-6 pb-4 border-b border-gray-200 last:border-b-0">
+                <div class="mb-4 pb-4 border-b border-gray-200 last:border-b-0">
                     <h3 class="text-xl font-semibold text-gray-800">Principal Program Manager (Head of IVAS Production & Test) </h3>
                     <p class="text-gray-600 font-medium">Microsoft | 2022-2025</p>
                     <ul class="list-disc list-outside ml-5 mt-2 space-y-1 text-gray-700">
@@ -102,7 +157,7 @@
                     </ul>
                 </div>
 
-                <div class="mb-6 pb-4 border-b border-gray-200 last:border-b-0">
+                <div class="mb-4 pb-4 border-b border-gray-200 last:border-b-0">
                     <h3 class="text-xl font-semibold text-gray-800">Head of Product & Engineering, Head of Customer Support</h3>
                     <p class="text-gray-600 font-medium">WaterGuru | 2017-2022</p>
                     <ul class="list-disc list-outside ml-5 mt-2 space-y-1 text-gray-700">
@@ -115,20 +170,20 @@
                     </ul>
                 </div>
 
-                <div class="mb-6 pb-4 border-b border-gray-200 last:border-b-0">
-                    <h3 class="text-xl font-semibold text-gray-800">Independent Consulting</h3>
-                    <p class="text-gray-600 font-medium">2014-2017</p>
+                <div class="mb-4 pb-4 border-b border-gray-200 last:border-b-0">
+                    <h3 class="text-xl font-semibold text-gray-800">Founder & Principal</h3>
+                    <p class="text-gray-600 font-medium">Chryr LLC | 2014-present</p>
                     <ul class="list-disc list-outside ml-5 mt-2 space-y-1 text-gray-700">
-                        <li>Strategized product development and built the initial prototype for a 5-person startup,
-                            laying the foundation for future <strong class="font-medium">scaling</strong>.</li>
-                        <li>Provided critical <strong class="font-medium">process engineering expertise for scaling manufacturing lines</strong> for new products,
+                        <li>Setup facilities, assembly lines, and provided critical <strong class="font-medium">process engineering expertise for scaling manufacturing lines</strong> for new products,
                             directly contributing to operational readiness.</li>
                         <li>Developed valuation models, budgets, and technology landscape analyses for VC due diligence and fundraising,
                             demonstrating strategic business understanding crucial for startup growth.</li>
+                        <li>Strategized product development and built the initial prototype for a 5-person startup
+
                     </ul>
                 </div>
 
-                <div class="mb-6 pb-4 border-b border-gray-200 last:border-b-0">
+                <div class="mb-4 pb-4 border-b border-gray-200 last:border-b-0">
                     <h3 class="text-xl font-semibold text-gray-800">R&D Manager</h3>
                     <p class="text-gray-600 font-medium">ZipLine Medical Inc. (acquired by Stryker) | 2013-2014</p>
                     <ul class="list-disc list-outside ml-5 mt-2 space-y-1 text-gray-700">
@@ -141,7 +196,8 @@
                     </ul>
                 </div>
 
-                <div class="mb-0 pb-0"> <h3 class="text-xl font-semibold text-gray-800">R&D Manager, Sr. R&D Engineer</h3>
+                <div class="mb-0 pb-0">
+                    <h3 class="text-xl font-semibold text-gray-800">R&D Manager, Sr. R&D Engineer</h3>
                     <p class="text-gray-600 font-medium">Vibrynt Inc. | 2008-2013</p>
                     <ul class="list-disc list-outside ml-5 mt-2 space-y-1 text-gray-700">
                         <li>Managed the program for on-time product delivery from cross-functional teams,
